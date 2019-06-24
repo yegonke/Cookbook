@@ -594,9 +594,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 .section-bg {
-  background: black;
+  background: #222627;
 }
-.main-bg{background: black;}
+.main-bg{background: #222627;}
 
 /* Featured Services Section
 --------------------------------*/
