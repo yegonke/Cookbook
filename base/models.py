@@ -20,3 +20,27 @@ class Blog(models.Model):
         managed = False
         db_table = 'website_blog'
         verbose_name_plural = "Blog"
+
+    @property
+    def content_min(self):
+        return truncatechars(self.content, 50)
+
+    @property
+    def emb_min(self):
+        return truncatechars(self.emb_link, 50)
+
+    @property
+    def src_min_mod(self):
+        return truncatechars(self.src_model, 50)
+
+    @property
+    def src_min_view(self):
+        return truncatechars(self.src_view, 50)
+
+    @property
+    def src_min_uri(self):
+        return truncatechars(self.src_uri, 50)
+
+    @property
+    def src_min_forum(self):
+        return truncatechars(self.forum_url, 50)
