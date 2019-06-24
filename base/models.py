@@ -18,5 +18,5 @@ class Blog(models.Model):
     forum_url = models.TextField(blank=True, null=True)
     class Meta:
         managed = False
-        db_table = 'website_blog'
+        db_table = 'blog'
         verbose_name_plural = "Blog"
