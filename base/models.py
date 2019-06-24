@@ -3,6 +3,7 @@ from django.db import models
 from datetime import datetime
 # Create your models here.
 class Blog(models.Model):
+	uniq_id = models.IntegerField(primary_key=True)
     category = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
