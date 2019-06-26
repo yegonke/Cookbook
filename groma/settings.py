@@ -127,8 +127,8 @@ django_heroku.settings(locals())
 
 #SEO
 WEBMASTER_VERIFICATION = {
-    'bing': 'BingSiteAuth',
-    'google': 'google886c97f9bc46fc33',
+    'bing': '<BingSiteAuth>',
+    'google': '<google886c97f9bc46fc33>',
     # 'majestic': '<majestic verification code>',
     # 'yandex': '<yandex verification code>',
     # 'alexa': '<alexa verification code>',
