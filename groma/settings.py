@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base',
+    'webmaster_verification',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,12 @@ STATICFILES_DIRS =(os.path.join(BASE_DIR,'static')),
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+#SEO
+WEBMASTER_VERIFICATION = {
+    # 'bing': '<bing verification code>',
+    'google': 'google886c97f9bc46fc33',
+    # 'majestic': '<majestic verification code>',
+    # 'yandex': '<yandex verification code>',
+    # 'alexa': '<alexa verification code>',
+}

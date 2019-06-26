@@ -19,4 +19,5 @@ from django.urls import path,include
 urlpatterns = [
     path('', include('base.urls')),
     path('scsman/', admin.site.urls),
+    path('', include('webmaster_verification.urls')),
 ]
