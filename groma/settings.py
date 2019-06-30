@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base',
     'webmaster_verification',
+    'rollyourown.seo',
 ]
 
 MIDDLEWARE = [

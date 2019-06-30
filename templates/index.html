@@ -2,7 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 {%load static%}
+{% load seo %}
 <head>
+  {% get_metadata as my_meta %}
+  {{ my_meta }}
   <meta charset="utf-8">
   <meta name="msvalidate.01" content="7ED28BE11E3B0271640CB9E30D0E1710" />
   <title>Licit Guides - Exclussive Services</title>
@@ -30,7 +33,7 @@
 </head>
 
 <body>
-
+ {{ my_meta.heading }}
   <!--==========================
     Header
   ============================-->
@@ -249,7 +252,7 @@
   
 <div class="modal fade right" id="myContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog modal-side modal-top-right" role="document">
+  <div class="modal-dialog modal-side modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title w-100" id="myModalLabel">Contact us</h4>
