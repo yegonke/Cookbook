@@ -46,11 +46,11 @@
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li class="menu-has-children"><a href="#about">Services</a>
             <ul>
-              <li><a href="http://licitguides.xyz/codeforme/">Code my project</a></li>
-              <li><a href="http://licitguides.xyz/trainme/">Paid training</a></li>
-              <li><a href="http://licitguides.xyz/guideme/">Become an affiliate</a></li>
-              <li><a href="http://licitguides.xyz/raiseme/">Showcase talent</a></li>
-              <li><a href="http://licitguides.xyz/hookme/">Hook me up</a></li>
+              <li><a data-toggle="modal" data-target="#exampleModal" data-whatever="coders@licitguides.xyz">Code my project</a></li>
+              <li><a data-toggle="modal" data-target="#exampleModal" data-whatever="training@licitguides.xyz">Free/Paid training</a></li>
+              <li><a data-toggle="modal" data-target="#exampleModal" data-whatever="affiliate@licitguides.xyz">Become an affiliate</a></li>
+              <li><a data-toggle="modal" data-target="#exampleModal" data-whatever="talent@licitguides.xyz">Showcase talent</a></li>
+              <li><a data-toggle="modal" data-target="#exampleModal" data-whatever="hookup@licitguides.xyz">Hook me up</a></li>
             </ul>
           </li>
          
@@ -90,7 +90,7 @@
               <div class="carousel-content">
                 <h2>Areas of concern</h2>
                 <p>We deal with: <font color="#ffff00">Engineering, Computer Science/I.T, Geomatics, Biostatistics, Economic Statistics,Agriculture.</font> More on the way.</p>
-                <a href="http://licitguides.xyz/network/" class="btn-get-started scrollto"> Join our network</a>
+                <a href="http://licitguides.xyz/network/" class="btn-get-started scrollto">Get List</a>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@
               <div class="carousel-content">
                 <h2>Barter program</h2>
                 <p>We like to address matters concerning satisfaction. Exchange of resources could also be an option. That is why we consider barter trade.</p>
-                <a href="http://licitguides.xyz/affiliate/" class="btn-get-started scrollto">Become an affiliate</a>
+                <a href="http://licitguides.xyz/affiliate/" class="btn-get-started scrollto">Try Barter</a>
               </div>
             </div>
           </div>
@@ -188,7 +188,7 @@
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
             <div class="about-col">
               
-             <h2 class="title"><a href="http://licitguides.xyz/guideme/">DoItYourself</a></h2>
+             <h2 class="title"><a href="#" data-toggle="tooltip" title="Popover title" data-content="Popover body content is set in this attribute.">DoItYourself</a></h2>
             <p class="description">DIY may be good for your customizations. We will provide you relevant resources.</p>
           </div>
           </div>
@@ -270,6 +270,38 @@
   </div>
 </div>
 
+<!-- Training-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   </main>
 
   <!--==========================
@@ -316,6 +348,19 @@
 
   <!-- Template Main Javascript File -->
   <script src="{%static 'js/main.js'%}"></script>
+
+  <script type="text/javascript">
+  $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+</script>
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
